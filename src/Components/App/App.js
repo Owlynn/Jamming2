@@ -3,6 +3,7 @@ import SearchBar from '../../Components/SearchBar/SearchBar.js'
 import SearchResults from '../../Components/SearchResults/SearchResults.js'
 import PlayList from '../../Components/PlayList/PlayList.js'
 import React from 'react';
+import Spotify from '../../util/Spotify';
 
 class App extends React.Component{
   //CONSTRUCTOR
@@ -51,7 +52,7 @@ class App extends React.Component{
   }
 
   search(term){
-    console.log(term);
+    Spotify.search(term).then(searchResults => {this.setState({ searchResults : searchResults})});
   }
 
   updatePlaylistName(name){
