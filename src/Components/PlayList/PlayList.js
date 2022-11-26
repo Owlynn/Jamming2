@@ -5,7 +5,7 @@ import Tracklist from '../TrackList/TrackList.js'
 class PlayList extends React.Component{
     constructor(props){
         super(props);
-        this.handleNameChange =this.handleNameChange.bind(this);
+        this.handleNameChange = this.handleNameChange.bind(this);
     }
     //METHODS
 
