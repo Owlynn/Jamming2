@@ -12,6 +12,8 @@ class SearchResults extends React.Component{
                 onAdd = {this.props.onAdd}
                 isRemoval = {false}
                 />
+
+                
             </div>
         )
     }

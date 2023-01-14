@@ -33,14 +33,14 @@ const Spotify = {
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,
                     {headers: {Authorization : `Bearer ${accessToken}`}}
                     ).then(response => {
-                        console.log("response" + response);
+                        // console.log("response" + response);
                         return response.json();}
                     ).then(jsonResponse => {
                         if (!jsonResponse.tracks){
-                            console.log("no jsonResponse.track");
+                            // console.log("no jsonResponse.track");
                             return [];
                         }
-                        console.log("retourne un résultat")
+                        // console.log("retourne un résultat")
                         return jsonResponse.tracks.items.map(track =>({
                             id : track.id,
                             name : track.name,
