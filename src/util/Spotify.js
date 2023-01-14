@@ -29,7 +29,7 @@ const Spotify = {
 
     search(term){
         const accessToken = Spotify.getAccessToken();
-        console.log("je rentre dans la fonction");
+        // console.log("je rentre dans la fonction");
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`,
                     {headers: {Authorization : `Bearer ${accessToken}`}}
                     ).then(response => {
